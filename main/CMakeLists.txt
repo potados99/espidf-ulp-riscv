@@ -1,9 +1,10 @@
-# Set usual component variables
-set(COMPONENT_SRCS "ulp_riscv_example_main.c")
-set(COMPONENT_ADD_INCLUDEDIRS "")
-set(COMPONENT_REQUIRES soc nvs_flash ulp driver)
+FILE(GLOB_RECURSE app_sources ${CMAKE_SOURCE_DIR}/main/*.*)
 
-register_component()
+idf_component_register(
+        SRCS ${app_sources}
+        INCLUDE_DIRS .
+        REQUIRES ulp nvs_flash ulp driver
+)
 
 #
 # ULP support additions to component CMakeLists.txt.

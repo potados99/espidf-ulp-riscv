@@ -18,6 +18,7 @@
 #include "ulp_main.h"
 #include "freertos/FreeRTOS.h"
 #include "freertos/task.h"
+#include "module/module.h"
 
 extern const uint8_t ulp_main_bin_start[] asm("_binary_ulp_main_bin_start");
 extern const uint8_t ulp_main_bin_end[]   asm("_binary_ulp_main_bin_end");
@@ -26,6 +27,8 @@ static void init_ulp_program(void);
 
 void app_main(void)
 {
+    work();
+
     /* Initialize selected GPIO as RTC IO, enable input, disable pullup and pulldown */
     rtc_gpio_init(GPIO_NUM_0);
     rtc_gpio_set_direction(GPIO_NUM_0, RTC_GPIO_MODE_INPUT_ONLY);

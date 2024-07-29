@@ -1,0 +1,6 @@
+#ifndef ESPIDF_ULP_RISCV_APPLE_H
+#define ESPIDF_ULP_RISCV_APPLE_H
+
+void bite();
+
+#endif // ESPIDF_ULP_RISCV_APPLE_H

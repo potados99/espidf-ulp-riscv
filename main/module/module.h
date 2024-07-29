@@ -1,0 +1,6 @@
+#ifndef ESPIDF_ULP_RISCV_MODULE_H
+#define ESPIDF_ULP_RISCV_MODULE_H
+
+void work();
+
+#endif // ESPIDF_ULP_RISCV_MODULE_H
